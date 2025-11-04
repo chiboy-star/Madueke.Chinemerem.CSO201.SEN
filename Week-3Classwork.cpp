@@ -20,7 +20,7 @@ int main() {
     double promo = 0;
 
     
-    cout << "Enter full name: ";
+    cout << "Enter Full Name ===> ";
     getline(cin, name);
 
     cout << "Is PAU student? (1 = true, 0 = false): ";
@@ -28,10 +28,10 @@ int main() {
     cin >> temp;
     isPau = (temp == 1);
 
-    cout << "Enter course (1–5): ";
+    cout << "Enter course (1–5): \n"<<"\t1. Photograpy\n"<<"\t2. Painting\n"<<"\t3. Fish Farming\n"<<"\t4. Baking\n"<<"\t5. Public speaking\n"<<"Enter here ===> ";
     cin >> courseChoice;
 
-    cout << "Enter location (1–5): ";
+    cout << "Enter course (1–5): \n"<<"\t1. Camp House A\n"<<"\t2. Camp House B\n"<<"\t3. Camp House C\n"<<"\t4. Camp House D\n"<<"\t5. Camp House E\n"<<"Enter here ===> ";
     cin >> locationChoice;
 
     
@@ -92,7 +92,7 @@ int main() {
     }
 
     // --- Random promo ---
-    int r = rand() % 100 ; 
+    int r = rand() % 100 + 1 ; 
     if (r == 7 || r == 77) {
         promo = 500;
     }
@@ -104,11 +104,10 @@ int main() {
     cout << "Name: " << name << "   (PAU student: " << (isPau ? "Yes" : "No") << ")" << endl;
     cout << "Course: " << courseName << "   Days: " << days << endl;
     cout << "Registration: " << regFee << "  (reg discount: " << regDiscount << ")" << endl;
-    cout << "Lodging: " << lodgingPerDay << " × " << days 
-         << " = " << lodgingCost + lodgeDiscount 
-         << "  (lodging discount: " << lodgeDiscount << ")" << endl;
+    cout << "Lodging: " << lodgingPerDay << " × " << days
+     << " = " << (lodgingPerDay * days)
+     << "  (lodging discount: " << lodgeDiscount << ")" << endl;
     cout << "Random draw: " << r << "  Promo applied: " << promo << endl;
-  
     cout << "TOTAL: " << total << endl;
     
     return 0;
