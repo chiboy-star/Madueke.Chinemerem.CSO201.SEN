@@ -5,7 +5,7 @@
 using namespace std;
 
 int linearSearch(const int list[], int key, int arraySize){
-    for(int 1=0;i<arraySize;i++){
+    for(int i=0;i<arraySize;i++){
         if(key==list[i]){
             return i;
         }
